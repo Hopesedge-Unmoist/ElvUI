@@ -245,8 +245,10 @@ function S:Blizzard_Communities()
 		checkButton:SetFrameLevel(checkButton:GetFrameLevel() + 1)
 	end
 
-	S:HandleDropDownBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.ClubFilterDropdown)
-	S:HandleDropDownBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.SortByDropdown)
+	S:HandleDropDownBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.ClubFilterDropdown, 150)
+	ClubFinderCommunityAndGuildFinderFrame.OptionsList.SortByDropdown:ClearAllPoints()
+	ClubFinderCommunityAndGuildFinderFrame.OptionsList.SortByDropdown:Point('LEFT', ClubFinderCommunityAndGuildFinderFrame.OptionsList.ClubFilterDropdown, 'RIGHT', 3, 0)
+	S:HandleDropDownBox(ClubFinderCommunityAndGuildFinderFrame.OptionsList.SortByDropdown, 150)
 
 	S:HandleButton(ClubFinderCommunityAndGuildFinderFrame.OptionsList.Search)
 	ClubFinderCommunityAndGuildFinderFrame.OptionsList.Search:ClearAllPoints()
