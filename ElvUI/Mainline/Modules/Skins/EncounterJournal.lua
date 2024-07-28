@@ -191,6 +191,7 @@ function S:Blizzard_EncounterJournal()
 	EJ.searchBox:Point('TOPLEFT', EJ.navBar, 'TOPRIGHT', 4, 0)
 
 	S:HandleTrimScrollBar(EJ.MonthlyActivitiesFrame.ScrollBar)
+        S:HandleTrimScrollBar(EJ.MonthlyActivitiesFrame.FilterList.ScrollBar)
 
 	if E.global.general.disableTutorialButtons then
 		EJ.MonthlyActivitiesFrame.HelpButton:Kill()
